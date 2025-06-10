@@ -59,7 +59,7 @@ jobs:
         uses: microsoft/powerplatform-actions/who-am-i@v1
         with:
           environment-url: ${{ env.BUILD_ENVIRONMENT_URL }}
-          user-name: ${{ secrets.UAT_SERVICE_ACCOUNT_USERNAME }}
+          user-name: ${{ secrets.UAT_POWER_PLATFORM_USERNAME }}
           password-secret: ${{ secrets.UAT_SERVICE_ACCOUNT_PASSWORD }}
 
       - name: Pack solution from source control into a solution.zip
@@ -76,7 +76,7 @@ jobs:
           # app-id: ${{ env.CLIENT_ID }}
           # client-secret: ${{ env.SECRET }}
           # tenant-id: ${{ env.TENANT_ID }}
-          user-name: ${{ secrets.UAT_SERVICE_ACCOUNT_USERNAME }}
+          user-name: ${{ secrets.UAT_POWER_PLATFORM_USERNAME }}
           password-secret: ${{ secrets.UAT_SERVICE_ACCOUNT_PASSWORD }} 
           solution-file: ${{ env.solution_outbound_folder }}/${{ env.solution_name }}_managed.zip
           # stage-and-upgrade: true
