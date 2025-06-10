@@ -84,7 +84,7 @@ jobs:
       #     tenant-id: ${{ env.TENANT_ID }}
       #     managed: true
       #     solution-name: ${{ github.event.inputs.solution_name }}
-      #     solution-output-file: ${{ github.event.inputs.solution_exported_folder }}${{ github.event.inputs.solution_name }}_managed.zip
+      #     solution-output-file: ${{ github.event.inputs.solution_exported_folder }}${{ github.event.inputs.solution_name }}.zip
 
       - name: Set up .NET Core
         uses: actions/setup-dotnet@v3
@@ -97,7 +97,7 @@ jobs:
       - name: Unpack solution (Both)
         uses: microsoft/powerplatform-actions/unpack-solution@v1
         with:
-          solution-file: ${{ github.event.inputs.solution_exported_folder }}${{ github.event.inputs.solution_name }}_managed.zip
+          solution-file: ${{ github.event.inputs.solution_exported_folder }}${{ github.event.inputs.solution_name }}.zip
           solution-folder: ${{ github.event.inputs.solution_folder }}${{ github.event.inputs.solution_name }}
           solution-type: 'Unmanaged'
           overwrite-files: true
