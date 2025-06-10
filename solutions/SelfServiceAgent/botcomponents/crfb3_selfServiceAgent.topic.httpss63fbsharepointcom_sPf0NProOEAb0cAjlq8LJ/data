@@ -1,5 +1,0 @@
-kind: KnowledgeSourceConfiguration
-source:
-  kind: SharePointSearchSource
-  site: https://s63fb.sharepoint.com/
-  additionalSearchTerms:
