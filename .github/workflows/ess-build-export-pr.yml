@@ -84,7 +84,7 @@ jobs:
       - name: Install Microsoft PowerApps CLI Tool
         run: dotnet tool install --global Microsoft.PowerApps.CLI.Tool
 
-      - name: Unpack solution (Both)
+      - name: Unpack solution (Managed)
         uses: microsoft/powerplatform-actions/unpack-solution@v1
         with:
           solution-file: ${{ github.event.inputs.solution_exported_folder }}${{ github.event.inputs.solution_name }}.zip
